@@ -12,7 +12,7 @@ import com.google.android.youtube.player.YouTubePlayer
 import com.google.android.youtube.player.YouTubePlayerView
 
 const val YOUTUBE_VIDEO_ID="eN6AYHAT8UM"
-const val YOUTUBE_PLAYLIST="RDMMeN6AYHAT8UM&start_radio=1"
+const val YOUTUBE_PLAYLIST="FL_VNnSmG8c9IONmttDjsDxg"
 
 class YoutubeActivity : YouTubeBaseActivity(),YouTubePlayer.OnInitializedListener {
 
@@ -43,6 +43,8 @@ class YoutubeActivity : YouTubeBaseActivity(),YouTubePlayer.OnInitializedListene
         p1?.setPlayerStateChangeListener(playerStateChangeListener)
         if(!p2){
             p1?.loadVideo(YOUTUBE_VIDEO_ID)
+        }else{
+            p1?.play()
         }
     }
 
